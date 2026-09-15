@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafetería Estado — Café de grano y pastelería en Paseo Estado, Rancagua</title>
+<meta name="description" content="Cafetería Estado, Estado 653, Rancagua. Café de grano, helados artesanales, cheesecake y rollitos de canela en pleno Paseo Estado. 4,9 ★ con 44 reseñas en Google.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#BE4F08">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23BE4F08'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='%23FBF4EA'%3EE%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Cafetería Estado">
+<meta property="og:title" content="Cafetería Estado — una joya en Paseo Estado, Rancagua">
+<meta property="og:description" content="Café de grano, helados artesanales y pastelería propia. 4,9 ★ con 44 reseñas, y de los mejores precios del centro.">
+<meta property="og:url" content="https://mmedinacode.github.io/Cafeteria-Estado-Web/">
+<meta property="og:image" content="https://mmedinacode.github.io/Cafeteria-Estado-Web/fotos/hero-capuchino.jpg">
+<meta property="og:image:alt" content="Capuchino con latte art sobre una mesa de mosaico en Cafetería Estado">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Caveat+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Pantalla de carga: las teselas del mosaico armándose -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mosaico" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <p class="loader-txt">Cafetería Estado</p>
+</div>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="head">
+  <div class="head-in">
+    <a class="brand" href="#inicio" data-tab="inicio" aria-label="Cafetería Estado, ir al inicio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="brand-txt"><strong>Cafetería Estado</strong><em>Paseo Estado · Rancagua</em></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <ul class="nav-links">
+        <li><a href="#inicio"    data-tab="inicio" class="on">Inicio</a></li>
+        <li><a href="#nosotros"  data-tab="nosotros">Nosotros</a></li>
+        <li><a href="#carta"     data-tab="carta">Carta</a></li>
+        <li><a href="#resenas"   data-tab="resenas">Reseñas</a></li>
+        <li><a href="#redes"     data-tab="redes">Redes</a></li>
+        <li><a href="#visitanos" data-tab="visitanos">Visítanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════ INICIO ══════════════ -->
+<section class="tab-panel on" data-tab-panel="inicio" id="inicio">
+  <div class="hero">
+    <div class="hero-txt">
+      <p class="eyebrow">Estado 653 · Paseo peatonal, Rancagua</p>
+      <h1>Una joya<br>en <em>Paseo Estado.</em></h1>
+      <p class="hero-lead">
+        Café de grano, helados artesanales y pastelería hecha acá mismo,
+        servidos sobre mesas de mosaico. Y con de los mejores precios del
+        centro de Rancagua.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#carta" data-tab="carta">Ver la carta</a>
+        <a class="btn btn-ghost" href="#resenas" data-tab="resenas">Leer las reseñas</a>
+      </div>
+      <p class="hero-open">
+        <span class="dot" id="statusDot" aria-hidden="true"></span>
+        <span data-horario-estado>Lunes a viernes de 08:00 a 20:00 · sábado desde las 12:00</span>
+      </p>
+    </div>
+    <figure class="hero-img">
+      <img src="fotos/hero-capuchino.jpg" alt="Capuchino con latte art servido sobre una mesa de mosaico en Cafetería Estado" fetchpriority="high" decoding="async">
+      <figcaption class="hero-cap">Las mesas de mosaico, su sello</figcaption>
+    </figure>
+  </div>
+
+  <!-- Una franja del mismo mosaico de sus mesas, dibujada en CSS -->
+  <div class="franja" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="cifras reveal stagger">
+      <div><b data-contar>4,9</b><span>★ en Google</span></div>
+      <div><b data-contar>44</b><span>reseñas</span></div>
+      <div><b data-contar>1.825</b><span>en Instagram</span></div>
+      <div><b>08:00</b><span>abre entre semana</span></div>
+    </div>
+
+    <div class="tri reveal stagger">
+      <article class="tri-card">
+        <h3>Café de grano</h3>
+        <p>Capuchino, cortado, latte, matcha, espresso y mockaccino — con
+           distintos tipos de leche. Está escrito en su pizarra.</p>
+        <a href="#carta" data-tab="carta" class="lnk">Ver la carta →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Pastelería y helados</h3>
+        <p>Cheesecake de maracuyá, rollitos de canela, red velvet, kuchen y
+           helados artesanales. "Deliciosos, autóctonos y variados".</p>
+        <a href="#nosotros" data-tab="nosotros" class="lnk">Conocer el local →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Precio de barrio</h3>
+        <p>Google estima $1.000 a $5.000 por persona. Es lo más económico de
+           todo el centro, y sus clientes lo nombran una y otra vez.</p>
+        <a href="#visitanos" data-tab="visitanos" class="lnk">Cómo llegar →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NOSOTROS ══════════════ -->
+<section class="tab-panel" data-tab-panel="nosotros" id="nosotros">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Nosotros</p>
+      <h2>Las tres B,<br>y algo más</h2>
+      <p class="sec-lead">
+        Buena, bonita y barata. Tampoco es nuestra frase: es de una reseña.
+      </p>
+    </header>
+
+    <div class="split reveal">
+      <figure class="split-img">
+        <img src="fotos/dos-capuchinos.jpg" alt="Dos capuchinos con latte art sobre una mesa de mosaico" loading="lazy" decoding="async">
+        <figcaption>Sobre la mesa de mosaico de siempre</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>Atendida por una sola persona</h3>
+        <blockquote class="cita">
+          “Notable cafetería atendida por una crack. Simplemente es
+          perfecta. (…) Hoy en día quedan pocos locales que puedan tener las
+          3 B's y este local tiene las tres y más.”
+          <cite>Alexis Pino, en Google</cite>
+        </blockquote>
+        <p>
+          El <strong>servicio personalizado</strong> aparece en reseña tras
+          reseña. No es una cadena: es un local chico del paseo peatonal
+          donde alguien se acuerda de lo que pediste.
+        </p>
+      </div>
+    </div>
+
+    <div class="split split-rev reveal">
+      <figure class="split-img">
+        <img src="fotos/fachada-pizarras.jpg" alt="La fachada de Cafetería Estado con sus dos pizarras escritas a mano" loading="lazy" decoding="async">
+        <figcaption>Su carta, escrita a mano en la vereda</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>La carta está en dos pizarras</h3>
+        <p>
+          No hay menú impreso ni carta digital: lo que ofrecen está escrito
+          con tiza en dos pizarras apoyadas en la vereda del
+          <strong>Paseo Estado</strong>. Todo lo que aparece en la sección
+          Carta de esta página salió de ahí.
+        </p>
+        <p>
+          Marcos verde menta, fachada blanca y mesas afuera, en pleno paseo
+          peatonal del centro de Rancagua.
+        </p>
+        <a href="#carta" data-tab="carta" class="lnk">Ver lo que dicen las pizarras →</a>
+      </div>
+    </div>
+
+    <div class="gal reveal stagger">
+      <figure><img src="fotos/cheesecake-maracuya.jpg" alt="Cheesecake de maracuyá sobre mesa de mosaico" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/rollito-canela.jpg" alt="Rollito de canela servido en plato" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/profiteroles.jpg" alt="Profiteroles con chocolate" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/matcha-latte.jpg" alt="Matcha latte con arte en la espuma" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/te-azul.jpg" alt="Té azul de flores servido en taza de vidrio" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/cafe-helado.jpg" alt="Café helado con crema" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/mesa-postres.jpg" alt="Mesa servida con tortas y café" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/fachada.jpg" alt="Fachada de Cafetería Estado en el Paseo Estado" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/capuchino-torta.jpg" alt="Capuchino junto a un trozo de torta" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/taza-verde.jpg" alt="Taza verde servida sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/torta-taza.jpg" alt="Trozo de torta y taza sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
+    </div>
+    <p class="note">Todas las fotos son del propio local, de su ficha de Google Maps.</p>
+  </div>
+</section>
+
+<!-- ══════════════ CARTA ══════════════ -->
+<section class="tab-panel" data-tab-panel="carta" id="carta">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Carta</p>
+      <h2>Lo que dicen<br>sus pizarras</h2>
+      <p class="sec-lead">
+        Transcrito de las dos pizarras que tienen en la vereda.
+      </p>
+    </header>
+
+    <div class="aviso reveal">
+      <strong>Sobre los precios:</strong> sus pizarras traen los productos
+      pero <b>ningún valor</b>, y no hay carta publicada en ninguna otra
+      parte. Así que acá van sin precio, en vez de con uno inventado.
+      Google estima <b>$1.000 a $5.000 por persona</b>, informado por 29
+      clientes — de lo más económico del centro.
+    </div>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Café de grano</h3>
+        <span class="carta-bloque-n">7 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/hero-capuchino.jpg" alt="Capuchino con latte art" loading="lazy" decoding="async">
+          <div><h4>Capuccino</h4><p>Uno de los dos destacados de su carta en Google.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Cortado</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Latte</h4><p>Con vainilla y/o caramelo, según dice la pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/matcha-latte.jpg" alt="Matcha latte" loading="lazy" decoding="async">
+          <div><h4>Matcha Latte</h4><p>Un cliente lo pidió con leche de coco.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Americano</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Espresso</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Mockaccino</h4><p>Así está escrito en su pizarra.</p></div><span class="price">Consultar</span></article>
+      </div>
+      <p class="nota-chica">Su pizarra agrega: <em>"diferentes tipos de leches"</em>.</p>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Frío</h3>
+        <span class="carta-bloque-n">4 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/profiterol-helado.jpg" alt="Profiterol con helado de chocolate" loading="lazy" decoding="async">
+          <div><h4>Helados artesanales</h4><p>“Muy ricos los sabores de helados”, dice una reseña.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/cafe-helado.jpg" alt="Café helado con crema" loading="lazy" decoding="async">
+          <div><h4>Café helado</h4><p>De su pizarra.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Frapuccino</h4><p>Así está escrito en su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/te-azul.jpg" alt="Té azul de flores" loading="lazy" decoding="async">
+          <div><h4>Té de flores</h4><p>Visto en sus fotos, servido en taza de vidrio.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Pastelería</h3>
+        <span class="carta-bloque-n">6 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/cheesecake-maracuya.jpg" alt="Cheesecake de maracuyá" loading="lazy" decoding="async">
+          <div><h4>Cheesecake</h4><p>El de maracuyá es su otro destacado en Google.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/rollito-canela.jpg" alt="Rollito de canela" loading="lazy" decoding="async">
+          <div><h4>Rollitos de canela</h4><p>De su pizarra, y nombrados en sus reseñas.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/cafe-torta-chocolate.jpg" alt="Torta de chocolate junto a un capuchino" loading="lazy" decoding="async">
+          <div><h4>Red Velvet</h4><p>De su pizarra.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/profiteroles.jpg" alt="Profiteroles bañados en chocolate" loading="lazy" decoding="async">
+          <div><h4>Profiteroles</h4><p>Vistos en sus propias fotos.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Kuchen</h4><p>Nombrado por Jacqueline Alfaro en su reseña.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/postre-frutos.jpg" alt="Postre con salsa de frutos rojos" loading="lazy" decoding="async">
+          <div><h4>Y mucho más</h4><p>Textual de su pizarra: la vitrina va cambiando.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Para acompañar</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item"><div><h4>Jugos naturales</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Limonada</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/panini.jpg" alt="Sándwich caliente servido en plato" loading="lazy" decoding="async">
+          <div><h4>Sándwiches</h4><p>Visto en sus fotos. Una reseña avisa que lo salado es acotado.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <p class="note">
+      Productos transcritos de <em>fotos/fachada-pizarras.jpg</em>, sus dos
+      pizarras. Conviene confirmar los precios en el local.
+    </p>
+    <!--
+      ⚠️ PLACEHOLDER MARCADO — NINGÚN PRECIO CONSTA.
+      Las dos pizarras traen los nombres pero no los valores, y no hay carta
+      publicada en ninguna otra parte (ni PDF, ni carta digital, ni fotos de
+      lista de precios en su ficha). Todo va "Consultar" a propósito.
+      Cuando el local mande su carta con precios, reemplazar.
+    -->
+  </div>
+</section>
+
+<!-- ══════════════ RESEÑAS ══════════════ -->
+<section class="tab-panel" data-tab-panel="resenas" id="resenas">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Reseñas</p>
+      <h2>4,9 ★ · 44 reseñas</h2>
+      <p class="sec-lead">Reales, copiadas tal cual de su ficha de Google Maps.</p>
+    </header>
+
+    <div class="revs reveal stagger">
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>¡UNA JOYA! | De los mejores cafés calidad-precio de la ciudad. El nivel de la bebida es muy alto, los pasteles deliciosos, autóctonos y variados, y el lugar al estar ubicado en Paseo Estado tiene un ambiente muy agradable.</p>
+        <footer><b>hector veliz</b><span>Local Guide · 27 reseñas</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Notable cafetería atendida por una crack. Simplemente es perfecta. Buena atención, buen capuchino, buen cheesecake, bonito lugar y buen precio. Hoy en día quedan pocos locales que puedan tener las 3 B's y este local tiene las tres y más. Sin más: recomendadísimo.</p>
+        <footer><b>Alexis Pino</b><span>Local Guide · 85 reseñas</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Excelente el café, los postres, la relación precio-calidad y el servicio personalizado hacen que sea la mejor cafetería en Rancagua</p>
+        <footer><b>Maximiliano Pino Lagos</b><span>7 reseñas</span></footer>
+      </blockquote>
+    </div>
+
+    <div class="rev-cta reveal">
+      <a class="btn btn-solid" href="https://search.google.com/local/reviews?placeid=ChIJJVguNLhDY5YRVksFCmvSR0I" target="_blank" rel="noopener">Leer las 44 reseñas</a>
+      <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJJVguNLhDY5YRVksFCmvSR0I" target="_blank" rel="noopener">Dejar una reseña</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ REDES ══════════════ -->
+<section class="tab-panel" data-tab-panel="redes" id="redes">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Redes</p>
+      <h2>Dónde encontrarnos</h2>
+      <p class="sec-lead">Sólo lo verificado. Ningún perfil inventado.</p>
+    </header>
+
+    <div class="redes">
+      <!-- Instagram verificado: el nombre del perfil ("Cafeteria Estado 653")
+           coincide con el número de su dirección. Las 3 fotos de la rejilla
+           son REALES del local, de su ficha de Maps — no scrapeadas de
+           Instagram. El pie lo dice. -->
+      <article class="red-card reveal">
+        <a class="red-card-head" href="https://www.instagram.com/cafeteriaestado653/" target="_blank" rel="noopener">
+          <span class="red-logo red-logo-ig"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></span>
+          <span class="red-card-txt">
+            <b>@cafeteriaestado653</b>
+            <em>1.825 seguidores · 370 publicaciones</em>
+          </span>
+          <span class="red-card-cta">Ver perfil →</span>
+        </a>
+        <a class="red-grid" href="https://www.instagram.com/cafeteriaestado653/" target="_blank" rel="noopener"
+           data-cta="Ver en Instagram" aria-label="Abrir el Instagram de Cafetería Estado">
+          <figure><img src="fotos/cheesecake-maracuya.jpg" alt="Cheesecake de maracuyá" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/dos-capuchinos.jpg" alt="Dos capuchinos sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/rollito-canela.jpg" alt="Rollito de canela" loading="lazy" decoding="async"></figure>
+        </a>
+        <p class="red-pie">Fotos del local publicadas en su ficha de Google.</p>
+      </article>
+
+      <a class="red-card reveal" href="tel:+56950931240">
+        <span class="red-card-head">
+          <span class="red-logo red-logo-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>+56 9 5093 1240</b>
+            <em>Teléfono publicado en Google Maps</em>
+          </span>
+          <span class="red-card-cta">Llamar →</span>
+        </span>
+        <p class="red-pie">Atienden ellos mismos: es un local de una persona.</p>
+      </a>
+
+      <article class="red-card reveal">
+        <a class="red-card-head" href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20Estado&query_place_id=ChIJJVguNLhDY5YRVksFCmvSR0I" target="_blank" rel="noopener">
+          <span class="red-logo red-logo-map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.38 8.5 15.5 8.5 15.5s8.5-9.12 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.6a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>Ficha en Google Maps</b>
+            <em>4,9 ★ · 44 reseñas</em>
+          </span>
+          <span class="red-card-cta">Abrir →</span>
+        </a>
+        <a class="red-grid" href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20Estado&query_place_id=ChIJJVguNLhDY5YRVksFCmvSR0I" target="_blank" rel="noopener"
+           data-cta="Ver la ficha" aria-label="Abrir la ficha de Cafetería Estado en Google Maps">
+          <figure><img src="fotos/fachada.jpg" alt="Fachada en el Paseo Estado" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/mesa-tortas.jpg" alt="Mesa servida con tortas y café" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/profiterol.jpg" alt="Profiterol bañado en chocolate" loading="lazy" decoding="async"></figure>
+        </a>
+        <p class="red-pie">El rating más alto de las cafeterías del centro.</p>
+      </article>
+    </div>
+
+    <!--
+      ⚠️ PENDIENTE: TikTok no buscado.
+      ⚠️ PedidosYa: un post suyo de Instagram de JULIO DE 2020 dice "Estamos
+      en Pedidos Ya", pero su ficha de Maps de HOY declara sólo "Consumo en
+      el lugar" y "Retiros en la puerta", sin entrega a domicilio. Por eso
+      NO se puso el botón flotante de delivery: mandar a la gente a un
+      perfil de PedidosYa dado de baja es peor que no tener botón.
+      Hay que preguntárselo al local.
+    -->
+    <div class="aviso reveal">
+      <strong>Una cosa que conviene que revisen:</strong> en 2020 publicaron
+      en su Instagram que estaban en PedidosYa, pero su ficha de Google de
+      hoy no declara entrega a domicilio. Si siguen repartiendo, vale la
+      pena que lo actualicen; si ya no, mejor sacarlo de los posts antiguos.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ VISÍTANOS ══════════════ -->
+<section class="tab-panel" data-tab-panel="visitanos" id="visitanos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Visítanos</p>
+      <h2>Estado 653, Rancagua</h2>
+    </header>
+
+    <div class="visit reveal">
+      <div class="visit-info">
+        <div class="vblock">
+          <h3>Dirección</h3>
+          <p>Estado 653, Local 1<br>Paseo Estado · Rancagua, O'Higgins</p>
+          <p class="sub">Plus Code R7G5+PC · es un paseo peatonal</p>
+        </div>
+
+        <div class="vblock">
+          <h3>Horario</h3>
+          <p class="estado"><span class="dot" aria-hidden="true"></span><span data-horario-estado>Lunes a viernes de 08:00 a 20:00</span></p>
+          <ul class="horario horario-semana" id="horario-lista" data-horario-semana>
+            <li data-dia="1"><span>Lunes</span><b>08:00 – 20:00</b></li>
+            <li data-dia="2"><span>Martes</span><b>08:00 – 20:00</b></li>
+            <li data-dia="3"><span>Miércoles</span><b>08:00 – 20:00</b></li>
+            <li data-dia="4"><span>Jueves</span><b>08:00 – 20:00</b></li>
+            <li data-dia="5"><span>Viernes</span><b>08:00 – 20:00</b></li>
+            <li data-dia="6"><span>Sábado</span><b>12:00 – 20:00</b></li>
+            <li data-dia="0"><span>Domingo</span><b class="cerrado">Cerrado</b></li>
+          </ul>
+          <p class="sub">Horario de su ficha de Google Maps, 15-09-2026.</p>
+        </div>
+
+        <div class="vblock">
+          <h3>Teléfono</h3>
+          <a class="vtel" href="tel:+56950931240">
+            <span class="vtel-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+            <span class="vtel-txt">
+              <b>+56 9 5093 1240</b>
+              <em>Publicado en su ficha de Google</em>
+            </span>
+            <span class="vtel-flecha" aria-hidden="true">→</span>
+          </a>
+          <!--
+            ⚠️ WhatsApp SIN confirmar. Es un +56 9, pero no se comprobó
+            wa.me/c/56950931240. Mientras no conste, va tel:, nunca wa.me.
+          -->
+        </div>
+
+        <div class="vblock">
+          <h3>Cómo se puede pedir</h3>
+          <ul class="vpedir">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v2H3V5zm2 4h14l-1 5h-4v6h-2v-6H6L5 9zm-1 12h16v2H4v-2z"/></svg> Consumo en el lugar</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7V6a6 6 0 1112 0v1h3v14a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3zm2 0h8V6a4 4 0 10-8 0v1z"/></svg> Retiros en la puerta</li>
+          </ul>
+          <p class="sub">
+            Servicios declarados en su ficha de Google. Hoy no figura
+            entrega a domicilio.
+          </p>
+        </div>
+
+        <div class="vblock vblock-cta">
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Cafeter%C3%ADa%20Estado%20653%20Rancagua&destination_place_id=ChIJJVguNLhDY5YRVksFCmvSR0I" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn-ghost" href="https://waze.com/ul?ll=-34.1731481,-70.7414257&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+          <a class="btn btn-ghost" href="tel:+56950931240">Llamar</a>
+        </div>
+      </div>
+
+      <div class="visit-map">
+        <!-- ⚠️ SIN loading="lazy": vive en pestaña display:none y no cargaría. -->
+        <iframe
+          title="Mapa de Cafetería Estado en Estado 653, Rancagua"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300!2d-70.7414257!3d-34.1731481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x966343b8342e5825%3A0x4247d26b0a054b56!2sCafeter%C3%ADa%20Estado!5e0!3m2!1ses!2scl!4v1757900000000!5m2!1ses!2scl"
+          width="100%" height="100%" style="border:0" allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Flotantes. Derecha = contacto directo: Instagram (1.825 seguidores) y
+     teléfono. La izquierda queda libre para delivery, que NO se pone: su
+     ficha de hoy no declara entrega a domicilio y el único indicio de
+     PedidosYa es un post suyo de 2020. -->
+<div class="float float-right">
+  <a class="fab fab-ig" href="https://www.instagram.com/cafeteriaestado653/" target="_blank" rel="noopener"
+     data-label="Instagram" aria-label="Instagram de Cafetería Estado"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+  <a class="fab fab-tel" href="tel:+56950931240" data-label="Llamar al local"
+     aria-label="Llamar a Cafetería Estado" style="background:var(--teja)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></a>
+  <button class="fab fab-top" id="toTop" data-label="Volver arriba" aria-label="Volver arriba"
+    style="background:var(--granate);color:#fff"><span aria-hidden="true">↑</span></button>
+</div>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">Cafetería Estado</p>
+      <p>Estado 653, Local 1 · Paseo Estado, Rancagua</p>
+      <p data-horario-resumen>Lun a Vie 08:00 – 20:00 · Sáb 12:00 – 20:00 · Dom cerrado</p>
+      <p><a href="tel:+56950931240">+56 9 5093 1240</a></p>
+    </div>
+    <div class="foot-demo">
+      <p><strong>Esta es una demo.</strong> No es el sitio oficial de Cafetería Estado.</p>
+      <p>Hecha con datos públicos reales de su ficha de Google Maps
+         (verificados el 15-09-2026) para mostrarle al local cómo se vería
+         su página web.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.HORARIO = {
+  dias: ["08:00 - 20:00","08:00 - 20:00","08:00 - 20:00","08:00 - 20:00",
+         "08:00 - 20:00","12:00 - 20:00","Cerrado"],
+  fuente: "Google Maps, 15-09-2026"
+};
+/* Instagram VERIFICADO el 15-09-2026: @cafeteriaestado653, 1.825 seguidores.
+   El nombre del perfil coincide con el número de su dirección (653).
+   Las fotos de la rejilla son reales del local, de su ficha de Maps. */
+window.REDES = {
+  instagram: {
+    user: "cafeteriaestado653",
+    seguidores: "1.825",
+    fotos: ["fotos/cheesecake-maracuya.jpg","fotos/dos-capuchinos.jpg","fotos/rollito-canela.jpg"]
+  }
+};
+</script>
+
+<script src="script.js"></script>
+<script src="vida.js"></script>
+<script src="carta-fotos.js"></script>
+<script src="carrito.js"></script>
+<script src="horario.js"></script>
+<script src="redes.js"></script>
+</body>
+</html>
