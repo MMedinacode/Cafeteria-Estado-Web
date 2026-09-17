@@ -24,6 +24,77 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Caveat+Brush&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cafetería Estado",
+  "description": "Café de grano, helados artesanales y pastelería propia. 4,9 ★ con 44 reseñas, y de los mejores precios del centro.",
+  "image": "https://mmedinacode.github.io/Cafeteria-Estado-Web/fotos/hero-capuchino.jpg",
+  "url": "https://mmedinacode.github.io/Cafeteria-Estado-Web/",
+  "telephone": "+56950931240",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estado 653, Local 1, Paseo Estado",
+    "addressLocality": "Rancagua",
+    "addressRegion": "Región de O'Higgins",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://www.instagram.com/cafeteriaestado653"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "12:00",
+      "closes": "20:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -102,7 +173,7 @@
       <article class="tri-card">
         <h3>Café de grano</h3>
         <p>Capuchino, cortado, latte, matcha, espresso y mockaccino — con
-           distintos tipos de leche. Está escrito en su pizarra.</p>
+           distintos tipos de leche. Está escrito en nuestra pizarra.</p>
         <a href="#carta" data-tab="carta" class="lnk">Ver la carta →</a>
       </article>
       <article class="tri-card">
@@ -113,8 +184,8 @@
       </article>
       <article class="tri-card">
         <h3>Precio de barrio</h3>
-        <p>Google estima $1.000 a $5.000 por persona. Es lo más económico de
-           todo el centro, y sus clientes lo nombran una y otra vez.</p>
+        <p>Entre $1.000 y $5.000 por persona. Es de lo más económico de
+           todo el centro, y nuestros clientes lo nombran una y otra vez.</p>
         <a href="#visitanos" data-tab="visitanos" class="lnk">Cómo llegar →</a>
       </article>
     </div>
@@ -187,7 +258,7 @@
       <figure><img src="fotos/taza-verde.jpg" alt="Taza verde servida sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
       <figure><img src="fotos/torta-taza.jpg" alt="Trozo de torta y taza sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
     </div>
-    <p class="note">Todas las fotos son del propio local, de su ficha de Google Maps.</p>
+    
   </div>
 </section>
 
@@ -197,17 +268,11 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Carta</p>
       <h2>Lo que dicen<br>sus pizarras</h2>
-      <p class="sec-lead">
-        Transcrito de las dos pizarras que tienen en la vereda.
-      </p>
+      <p class="sec-lead">Lo que está escrito en nuestras dos pizarras.</p>
     </header>
 
     <div class="aviso reveal">
-      <strong>Sobre los precios:</strong> sus pizarras traen los productos
-      pero <b>ningún valor</b>, y no hay carta publicada en ninguna otra
-      parte. Así que acá van sin precio, en vez de con uno inventado.
-      Google estima <b>$1.000 a $5.000 por persona</b>, informado por 29
-      clientes — de lo más económico del centro.
+      <strong>Referencia de precio</strong>: entre $1.000 y $5.000 por persona.
     </div>
 
     <section class="carta-bloque reveal">
@@ -218,17 +283,17 @@
       <div class="menu reveal stagger">
         <article class="menu-item">
           <img src="fotos/hero-capuchino.jpg" alt="Capuchino con latte art" loading="lazy" decoding="async">
-          <div><h4>Capuccino</h4><p>Uno de los dos destacados de su carta en Google.</p></div>
+          <div><h4>Capuccino</h4><p>Uno de los dos destacados de la carta.</p></div>
           <span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Cortado</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Cortado</h4><p>De nuestra pizarra.</p></div><span class="price">Consultar</span></article>
         <article class="menu-item"><div><h4>Latte</h4><p>Con vainilla y/o caramelo, según dice la pizarra.</p></div><span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/matcha-latte.jpg" alt="Matcha latte" loading="lazy" decoding="async">
           <div><h4>Matcha Latte</h4><p>Un cliente lo pidió con leche de coco.</p></div>
           <span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Americano</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Espresso</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Mockaccino</h4><p>Así está escrito en su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Americano</h4><p>De nuestra pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Espresso</h4><p>De nuestra pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Mockaccino</h4><p>Así está escrito en nuestra pizarra.</p></div><span class="price">Consultar</span></article>
       </div>
       <p class="nota-chica">Su pizarra agrega: <em>"diferentes tipos de leches"</em>.</p>
     </section>
@@ -245,12 +310,12 @@
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/cafe-helado.jpg" alt="Café helado con crema" loading="lazy" decoding="async">
-          <div><h4>Café helado</h4><p>De su pizarra.</p></div>
+          <div><h4>Café helado</h4><p>De nuestra pizarra.</p></div>
           <span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Frapuccino</h4><p>Así está escrito en su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Frapuccino</h4><p>Así está escrito en nuestra pizarra.</p></div><span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/te-azul.jpg" alt="Té azul de flores" loading="lazy" decoding="async">
-          <div><h4>Té de flores</h4><p>Visto en sus fotos, servido en taza de vidrio.</p></div>
+          <div><h4>Té de flores</h4><p>Servido en taza de vidrio.</p></div>
           <span class="price">Consultar</span></article>
       </div>
     </section>
@@ -267,20 +332,20 @@
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/rollito-canela.jpg" alt="Rollito de canela" loading="lazy" decoding="async">
-          <div><h4>Rollitos de canela</h4><p>De su pizarra, y nombrados en sus reseñas.</p></div>
+          <div><h4>Rollitos de canela</h4><p>De nuestra pizarra.</p></div>
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/cafe-torta-chocolate.jpg" alt="Torta de chocolate junto a un capuchino" loading="lazy" decoding="async">
-          <div><h4>Red Velvet</h4><p>De su pizarra.</p></div>
+          <div><h4>Red Velvet</h4><p>De nuestra pizarra.</p></div>
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/profiteroles.jpg" alt="Profiteroles bañados en chocolate" loading="lazy" decoding="async">
-          <div><h4>Profiteroles</h4><p>Vistos en sus propias fotos.</p></div>
+          <div><h4>Profiteroles</h4></div>
           <span class="price">Consultar</span></article>
         <article class="menu-item"><div><h4>Kuchen</h4><p>Nombrado por Jacqueline Alfaro en su reseña.</p></div><span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/postre-frutos.jpg" alt="Postre con salsa de frutos rojos" loading="lazy" decoding="async">
-          <div><h4>Y mucho más</h4><p>Textual de su pizarra: la vitrina va cambiando.</p></div>
+          <div><h4>Y mucho más</h4><p>De nuestra pizarra: la vitrina va cambiando.</p></div>
           <span class="price">Consultar</span></article>
       </div>
     </section>
@@ -291,19 +356,16 @@
         <span class="carta-bloque-n">3 opciones</span>
       </header>
       <div class="menu reveal stagger">
-        <article class="menu-item"><div><h4>Jugos naturales</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Limonada</h4><p>De su pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Jugos naturales</h4><p>De nuestra pizarra.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Limonada</h4><p>De nuestra pizarra.</p></div><span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/panini.jpg" alt="Sándwich caliente servido en plato" loading="lazy" decoding="async">
-          <div><h4>Sándwiches</h4><p>Visto en sus fotos. Una reseña avisa que lo salado es acotado.</p></div>
+          <div><h4>Sándwiches</h4><p> Una reseña avisa que lo salado es acotado.</p></div>
           <span class="price">Consultar</span></article>
       </div>
     </section>
 
-    <p class="note">
-      Productos transcritos de <em>fotos/fachada-pizarras.jpg</em>, sus dos
-      pizarras.
-    </p>
+    
     <!--
       ⚠️ PLACEHOLDER MARCADO — NINGÚN PRECIO CONSTA.
       Las dos pizarras traen los nombres pero no los valores, y no hay carta
@@ -320,7 +382,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Reseñas</p>
       <h2>4,9 ★ · 44 reseñas</h2>
-      <p class="sec-lead">Reales, copiadas tal cual de su ficha de Google Maps.</p>
+      <p class="sec-lead">Lo que dicen nuestros clientes en Google.</p>
     </header>
 
     <div class="revs reveal stagger">
@@ -356,7 +418,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Redes</p>
       <h2>Dónde encontrarnos</h2>
-      <p class="sec-lead">Sólo lo verificado. Ningún perfil inventado.</p>
+      <p class="sec-lead">Todos nuestros canales, en un solo lugar.</p>
     </header>
 
     <div class="redes">
@@ -379,7 +441,7 @@
           <figure><img src="fotos/dos-capuchinos.jpg" alt="Dos capuchinos sobre la mesa de mosaico" loading="lazy" decoding="async"></figure>
           <figure><img src="fotos/rollito-canela.jpg" alt="Rollito de canela" loading="lazy" decoding="async"></figure>
         </a>
-        <p class="red-pie">Fotos del local publicadas en su ficha de Google.</p>
+        
       </article>
 
       <a class="red-card reveal" href="tel:+56950931240">
@@ -387,7 +449,7 @@
           <span class="red-logo red-logo-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
           <span class="red-card-txt">
             <b>+56 9 5093 1240</b>
-            <em>Teléfono publicado en Google Maps</em>
+            <em>Nuestro teléfono</em>
           </span>
           <span class="red-card-cta">Llamar →</span>
         </span>
@@ -409,7 +471,7 @@
           <figure><img src="fotos/mesa-tortas.jpg" alt="Mesa servida con tortas y café" loading="lazy" decoding="async"></figure>
           <figure><img src="fotos/profiterol.jpg" alt="Profiterol bañado en chocolate" loading="lazy" decoding="async"></figure>
         </a>
-        <p class="red-pie">El rating más alto de las cafeterías del centro.</p>
+        
       </article>
     </div>
 
@@ -454,7 +516,7 @@
             <li data-dia="6"><span>Sábado</span><b>12:00 – 20:00</b></li>
             <li data-dia="0"><span>Domingo</span><b class="cerrado">Cerrado</b></li>
           </ul>
-          <p class="sub">Horario de su ficha de Google Maps, 15-09-2026.</p>
+          
         </div>
 
         <div class="vblock">
@@ -463,7 +525,7 @@
             <span class="vtel-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
             <span class="vtel-txt">
               <b>+56 9 5093 1240</b>
-              <em>Publicado en su ficha de Google</em>
+              
             </span>
             <span class="vtel-flecha" aria-hidden="true">→</span>
           </a>
@@ -479,10 +541,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v2H3V5zm2 4h14l-1 5h-4v6h-2v-6H6L5 9zm-1 12h16v2H4v-2z"/></svg> Consumo en el lugar</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7V6a6 6 0 1112 0v1h3v14a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3zm2 0h8V6a4 4 0 10-8 0v1z"/></svg> Retiros en la puerta</li>
           </ul>
-          <p class="sub">
-            Servicios declarados en su ficha de Google. Hoy no figura
-            entrega a domicilio.
-          </p>
+          
         </div>
 
         <div class="vblock vblock-cta">
@@ -561,5 +620,6 @@ window.REDES = {
 <script src="horario.js"></script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
