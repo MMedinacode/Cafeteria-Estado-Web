@@ -655,3 +655,81 @@ h1,h2,h3,h4{
   .carta-bloque-head{ flex-direction:column; align-items:flex-start; gap:4px; }
   .carta-bloque-n{ text-align:left; }
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   21-09-2026 · patrón aprobado de Redes + los arreglos que marcó Matías
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── Nosotros ──────────────────────────────────────────────────────────
+   auto-fit con mínimo de 190px daba 5 columnas en el contenedor de 1160,
+   y con 11 fotos la última fila quedaba con UNA sola, huérfana. Con 4
+   columnas van 4+4+3 y ninguna queda suelta. Y aire abajo, que sólo
+   tenía padding-top y se pegaba al corte de la sección. */
+.gal{ grid-template-columns:repeat(4,minmax(0,1fr));
+      padding-bottom:clamp(30px,5vw,56px); }
+@media (max-width:860px){ .gal{ grid-template-columns:repeat(3,minmax(0,1fr)) } }
+@media (max-width:560px){ .gal{ grid-template-columns:repeat(2,minmax(0,1fr)) } }
+
+/* ── Redes: patrón aprobado ────────────────────────────────────────────
+   Las tres tarjetas con la MISMA silueta: cabecera, bloque en 4:3 y pie.
+   Lo que las empareja no es el ancho, es la silueta. */
+.redes{ grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch;
+        padding-bottom:clamp(34px,5vw,64px); gap:20px; }
+.redes .red-card{ height:100%; }
+.red-pie{ margin-top:auto; }
+@media (max-width:980px){ .redes{ grid-template-columns:repeat(2,minmax(0,1fr)) } }
+@media (max-width:660px){ .redes{ grid-template-columns:1fr } }
+
+.redes .red-grid{ aspect-ratio:4/3; }
+.redes .red-grid figure{ height:100%; overflow:hidden; border-radius:9px; margin:0; }
+.redes .red-grid figure img{ width:100%; height:100%; object-fit:cover; display:block;
+  transition:transform .6s var(--fx); }
+.red-card:hover .red-grid figure img{ transform:scale(1.07); }
+.red-grid figure:nth-child(2) img{ transition-delay:.04s; }
+.red-grid figure:nth-child(3) img{ transition-delay:.08s; }
+
+/* La tarjeta sin fotos no se deja corta: su bloque lleva el número grande,
+   sobre el naranja de las teselas de su fachada. */
+.red-card-tel .tel-panel{
+  aspect-ratio:4/3; display:grid; place-content:center; gap:7px; text-align:center;
+  padding:16px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(190,79,8,.20), transparent 70%),
+    linear-gradient(160deg, rgba(190,79,8,.13), rgba(127,200,180,.10));
+  border-top:1px solid var(--linea); border-bottom:1px solid var(--linea);
+}
+.red-card-tel .tel-num{
+  font-size:clamp(20px,2.4vw,25px); font-weight:700;
+  font-variant-numeric:tabular-nums; color:var(--tinta); white-space:nowrap;
+}
+.red-card-tel .tel-sub{
+  font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--teja); font-weight:700;
+}
+.red-card-tel:hover .tel-panel{ filter:brightness(1.05); }
+
+/* ── Contacto de Visítanos ─────────────────────────────────────────────
+   Una fila, una sola cosa pinchable, el color de cada canal en el icono. */
+.cbtn{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:12px;
+  padding:11px 13px; margin-bottom:8px; text-decoration:none; color:inherit;
+  background:var(--papel); border:1px solid var(--linea); border-radius:11px;
+  transition:transform .22s var(--fx), box-shadow .22s var(--fx), border-color .22s var(--fx);
+}
+.cbtn:last-of-type{ margin-bottom:0; }
+.cbtn:hover{ transform:translateY(-2px); box-shadow:var(--sombra-alta); }
+.cbtn:active{ transform:scale(.99); }
+.cbtn-ico{ width:36px; height:36px; border-radius:10px; display:grid; place-content:center;
+  color:#fff; flex:none; }
+.cbtn-ico svg{ width:19px; height:19px; fill:currentColor; display:block; }
+.cbtn-txt{ display:flex; flex-direction:column; line-height:1.25; min-width:0; }
+.cbtn-txt b{ font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--gris); font-weight:700; }
+.cbtn-txt em{ font-style:normal; font-size:15.5px; font-weight:600;
+  font-variant-numeric:tabular-nums; overflow:hidden; text-overflow:ellipsis; }
+.cbtn-go{ font-size:17px; color:var(--gris); transition:transform .22s var(--fx); }
+.cbtn:hover .cbtn-go{ transform:translateX(3px); }
+.cbtn-tel .cbtn-ico{ background:var(--teja); }
+.cbtn-tel:hover{ border-color:var(--teja); }
+.cbtn-ig .cbtn-ico{ background:linear-gradient(45deg,#F9CE34,#EE2A7B 50%,#6228D7); }
+.cbtn-ig:hover{ border-color:#EE2A7B; }
