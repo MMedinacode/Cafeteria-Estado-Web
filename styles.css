@@ -733,3 +733,40 @@ h1,h2,h3,h4{
 .cbtn-tel:hover{ border-color:var(--teja); }
 .cbtn-ig .cbtn-ico{ background:linear-gradient(45deg,#F9CE34,#EE2A7B 50%,#6228D7); }
 .cbtn-ig:hover{ border-color:#EE2A7B; }
+
+
+/* 22-09-2026 — Facebook entra como cuarta tarjeta, así que Redes pasa a
+   dos columnas: cuatro tarjetas en tres columnas dejan una huérfana. */
+.redes{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:660px){ .redes{ grid-template-columns:1fr } }
+
+/* La de Facebook no lleva fotos —las de esta página son de su ficha de
+   Google—, así que su bloque muestra el dato grande, igual que la del
+   teléfono. Es el patrón. */
+.red-card-fb .fb-panel{
+  aspect-ratio:4/3; display:grid; place-content:center; gap:2px; text-align:center;
+  padding:16px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(24,119,242,.18), transparent 70%),
+    linear-gradient(160deg, rgba(24,119,242,.12), rgba(12,93,199,.08));
+  border-top:1px solid var(--linea); border-bottom:1px solid var(--linea);
+}
+.red-card-fb .fb-num{ font-family:"Yeseva One",serif; font-size:clamp(30px,3.4vw,40px);
+  line-height:1; color:var(--tinta); }
+.red-card-fb .fb-sub{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:#1877F2; font-weight:700; margin-top:4px; }
+.red-card-fb .fb-nota{ font-size:13px; color:var(--gris); margin-top:8px; }
+.red-card-fb:hover .fb-panel{ filter:brightness(1.05); }
+.red-logo-fb{ background:linear-gradient(135deg,#1877F2,#0C5DC7); color:#fff; }
+
+.cbtn-mail .cbtn-ico{ background:linear-gradient(135deg,#D93025,#8A1C14); }
+.cbtn-mail:hover{ border-color:#D93025; }
+.cbtn-mail .cbtn-txt em{ font-size:14px; }
+
+
+/* Las fotos de la rejilla se salían de su celda: la columna medía 180px y
+   la <figure> 411. Un elemento de rejilla no baja de su contenido salvo
+   que se le permita — min-width:0 es lo que lo permite. */
+.redes .red-grid{ min-width:0; }
+.redes .red-grid figure{ min-width:0; width:100%; }
+.redes .red-grid figure img{ min-width:0; max-width:100%; }
